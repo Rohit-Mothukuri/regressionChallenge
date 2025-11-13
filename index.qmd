@@ -26,6 +26,10 @@ import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import statsmodels.api as sm
+import warnings
+
+# Suppress sklearn feature name warnings
+warnings.filterwarnings('ignore', category=UserWarning, module='sklearn')
 
 # Set style for professional plots
 sns.set_style("whitegrid")
